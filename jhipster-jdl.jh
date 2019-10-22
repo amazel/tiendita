@@ -1,0 +1,15 @@
+entity Category {
+	categoryName String
+}
+
+entity Product {
+    productName String,
+    imageURL String,
+    price BigDecimal,
+    discount Integer,
+    description String
+}
+
+relationship OneToOne {
+	Product{category} to Category
+}
